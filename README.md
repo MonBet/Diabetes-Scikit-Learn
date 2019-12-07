@@ -10,5 +10,3 @@ Diabetes Predictor using SVM Classifier on scikit-learn. Web app using flask
 
 - [Aditya Rahman](https://www.linkedin.com/in/adityarahman032)
 - [Galih Hadi Wibowo](https://github.com/MonBet)
-
-## 
