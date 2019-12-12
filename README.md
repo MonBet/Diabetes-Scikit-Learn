@@ -1,6 +1,7 @@
 # Diabetes Classification 
 
 Diabetes Predictor using Gaussian Naive Bayes Classifier on scikit-learn. Web app using flask
+http://diabetes-classification.tepuntal.com/
 
 ## Dataset
 
