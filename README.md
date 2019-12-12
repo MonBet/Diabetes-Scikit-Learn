@@ -1,6 +1,6 @@
 # Diabetes Classification 
 
-Diabetes Predictor using SVM Classifier on scikit-learn. Web app using flask
+Diabetes Predictor using Gaussian Naive Bayes Classifier on scikit-learn. Web app using flask
 
 ## Dataset
 
