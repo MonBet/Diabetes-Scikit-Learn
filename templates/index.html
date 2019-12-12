@@ -106,6 +106,13 @@
             </form>
         </div>
         <div class="col-6 pr-5">
+            <div class="mb-3">
+                <button class="btn btn-danger" data-toggle="modal" data-target="#howToUseModal">How to Use</button>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#howToMakeModal">How to Make</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#howItWorkModal">How it Work</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#developersModal">Developers</button>
+            </div>
+
             <p>
                 Diabetes is a disease in which your blood glucose, or blood sugar, levels are too high. Glucose comes
                 from the foods you eat. Insulin is a hormone that helps the glucose get into your cells to give them
@@ -116,7 +123,14 @@
                 diabetes.
             </p>
             <p>
-                This tool is expected to classify whether someone has diabetes or not using some of the features below using Gaussian Naive Bayes Model on Scikit-Learn with <b>76.43% <a href="https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)" target="_blank">Accuracy</a></b>, <b>68.04% <a href="https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)" target="_blank">Precision</a></b> and <b>61.19% <a href="https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)" target="_blank">Recall</a>.</b> 
+                This tool is expected to classify whether someone has diabetes or not using some of the features below
+                using Gaussian Naive Bayes Model on Scikit-Learn with <b>76.43% <a
+                    href="https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)"
+                    target="_blank">Accuracy</a></b>, <b>68.04% <a
+                    href="https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)"
+                    target="_blank">Precision</a></b> and <b>61.19% <a
+                    href="https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)"
+                    target="_blank">Recall</a>.</b>
             </p>
 
             <h5>Features</h5>
@@ -130,14 +144,96 @@
                 <li><b>Diabetes Pedigree Function</b> Diabetes pedigree function</li>
                 <li><b>Age</b> Age (years)</li>
             </ul>
-
-            <h5>Authors</h5>
-            <a href="https://www.linkedin.com/in/adityarahman032" target="_blank">Aditya Rahman</a> |
-            <a href="https://github.com/MonBet" target="_blank">Galih Hadi Wibowo</a>
         </div>
     </div>
 </div>
-{{ prediction_text }}
+
+<div class="modal fade" id="howToUseModal" tabindex="-1" role="dialog" aria-labelledby="howToUseModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="howToUseModalLabel">How to Use</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li>Fill in the form in the application</li>
+                    <li>Hit "Predict"</li>
+                </ol>
+                <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="howToMakeModal" tabindex="-1" role="dialog" aria-labelledby="howToMakeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="howToMakeModalLabel">How to Make</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid mb-3" src="{{ url_for('static', filename='img/how-to-make.jpeg')}}">
+                <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="howItWorkModal" tabindex="-1" role="dialog" aria-labelledby="howItWorkModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="howItWorkModalLabel">How it Work</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid mb-3" src="{{ url_for('static', filename='img/how-it-work.jpeg')}}">
+                <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="developersModal" tabindex="-1" role="dialog" aria-labelledby="developersModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="developersModalLabel">Developers</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <img class="img-thumbnail rounded-circle mb-2" src="https://www.gravatar.com/avatar/8de42de7c593a9cb6b098c34dbc75920">
+                        <h6>Aditya Rahman</h6>
+                        <p>NIM: 160535611825</p>
+                        <a href="https://www.linkedin.com/in/adityarahman032/">Linkedin</a>
+                    </div>
+                    <div class="col-6 text-center">
+                        <img class="img-thumbnail rounded-circle mb-2" src="https://www.gravatar.com/avatar/12345?d=monsterid">
+                        <h6>Galih Hadi Wibowo</h6>
+                        <p>NIM: 160535611825</p>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <a href="https://github.com/kudaliar032/diabetes-classification-svm" target="_blank" class="github-corner"
    aria-label="View source on GitHub">
@@ -168,8 +264,19 @@
                 icon: res.prediction_text === "1" ? "error" : "success",
                 title: res.prediction_text === "1" ? "Oops..." : "Yass...",
                 text: res.prediction_text === "1" ? "You probably have diabetes, Please contact a doctor" : "You're healthy!!",
-            }).then(res => {
-                if (res.value) {
+                showCancelButton: true,
+                cancelButtonText: "OK",
+                confirmButtonText: "Show Probability",
+                reverseButtons: true
+            }).then(res_swal => {
+                if (res_swal.value) {
+                    Swal.fire({
+                        title: "Probability",
+                        text: res.proba,
+                        showCancelButton: true,
+                        showConfirmButton: false
+                    });
+                } else {
                     formPredict.trigger("reset");
                 }
             });

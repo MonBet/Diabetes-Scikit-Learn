@@ -14,9 +14,13 @@ def home():
 def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
+
     prediction = model.predict(final_features)
+    proba = model.predict_proba(final_features)
+
     output = round(prediction[0], 2)
-    return jsonify(prediction_text=format(output))
+
+    return jsonify(prediction_text=format(output), proba=format(proba))
 
 @app.route('/results', methods=['POST'])
 def results():
