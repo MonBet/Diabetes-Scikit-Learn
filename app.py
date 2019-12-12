@@ -5,7 +5,6 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open('model_nb.pkl', 'rb'))
 
-
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -16,11 +15,8 @@ def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-
     output = round(prediction[0], 2)
-
     return jsonify(prediction_text=format(output))
-
 
 @app.route('/results', methods=['POST'])
 def results():
