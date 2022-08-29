@@ -32,10 +32,12 @@ def results():
 
 @app.route('/api/', methods=['POST'])
 def makecalc():
-    j_data = request.get_json()
-    #prediction = np.array2string(model.predict(j_data))
-    prediction = np.array2string(model.predict_proba(j_data))
-    return jsonify(prediction)
+    if request.method == 'POST':
+        j_data = request.get_json()
+        #prediction = np.array2string(model.predict(j_data))
+        prediction = np.array2string(model.predict_proba(j_data))
+        return jsonify(prediction)
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
