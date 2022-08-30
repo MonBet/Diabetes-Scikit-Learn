@@ -30,7 +30,7 @@ def results():
     output = prediction[0]
     return jsonify(output)
 
-@app.route('/api/', methods=['POST'])
+@app.route('/api/', methods=['POST', ...])
 def makecalc():
     if request.method == 'POST':
         j_data = request.get_json()
